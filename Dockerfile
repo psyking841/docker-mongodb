@@ -15,3 +15,5 @@ EXPOSE 27017
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["mongod", "--auth", "--dbpath", "/data/db/", "--bind_ip", "0.0.0.0", "--port", "27017"]
+
